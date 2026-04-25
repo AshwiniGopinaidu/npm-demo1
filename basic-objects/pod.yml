@@ -1,0 +1,12 @@
+# https://kubernetes.io/docs/concepts/workloads/pods/
+# Note that we wont be creating pods directly we would rather be using deployments for the same
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+spec:
+  containers:
+  - name: nginx
+    image: nginx:1.14.2
+    ports:
+    - containerPort: 80

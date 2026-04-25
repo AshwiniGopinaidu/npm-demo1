@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: test
+  labels:
+    app: test
+spec:
+  containers:
+    - name: curl
+      image: curlimages/curl
+      command: ["sleep", "3600"]
+
+      # use nginx n get exec inside it to curl backend 
